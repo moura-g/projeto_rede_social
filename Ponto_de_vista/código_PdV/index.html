@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Ponto de Vista</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topo">
+        <h1>Ponto de Vista</h1>
+        <div class="perfil-topo">
+            <img id="fotoUsuario" src="https://via.placeholder.com/40" alt="Foto" width="40" height="40">
+            <span id="nomeUsuario">Visitante</span>
+            <a href="login.html" id="linkLogin">Entrar / Cadastrar</a>
+            <button id="btnSair" style="display: none;">Sair</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Formulário para criar post (só aparece se estiver logado) -->
+        <section id="secaoCriarPost" class="card" style="display: none;">
+            <h3>Criar Publicação</h3>
+            <form id="formNovoPost">
+                <textarea id="textoNovoPost" rows="3" placeholder="Digite seus pensamentos..."></textarea>
+                <input type="url" id="imgNovoPost" placeholder="URL de uma imagem (opcional)">
+                <button type="submit">Publicar</button>
+            </form>
+            <p id="erroPost" class="erro"></p>
+        </section>
+
+        <!-- Lista onde os posts serão renderizados -->
+        <section id="listaPosts"></section>
+    </main>
+
+    <script type="module" src="./JavaScript/feed.js"></script>
+</body>
+</html>

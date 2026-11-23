@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Rede Social - Entrar ou Cadastrar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <section class="card">
+            <h2>Entrar</h2>
+            <form id="formLogin">
+                <input type="text" id="loginUser" placeholder="Login" required>
+                <input type="password" id="loginSenha" placeholder="Senha" required>
+                <button type="submit">Entrar</button>
+            </form>
+            <p id="erroLogin" class="erro"></p>
+        </section>
+
+        <section class="card">
+            <h2>Criar Conta</h2>
+            <form id="formCadastro">
+                <input type="text" id="cadLogin" placeholder="Escolha um login" required>
+                <input type="text" id="cadNome" placeholder="Seu nome" required>
+                <input type="password" id="cadSenha" placeholder="Crie uma senha" required>
+                <input type="url" id="cadImg" placeholder="URL da foto de perfil (opcional)">
+                <button type="submit">Cadastrar</button>
+            </form>
+            <p id="erroCadastro" class="erro"></p>
+        </section>
+
+    </main>
+
+    <script type="module" src="./JavaScript/login.js"></script>
+</body>
+</html>

@@ -1,36 +1,95 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Rede Social - Entrar ou Cadastrar</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login - Ponto de Vista</title>
+    <link rel="stylesheet" href="./aparencia.css">
 </head>
 <body>
-    <main class="container">
-        <section class="card">
-            <h2>Entrar</h2>
-            <form id="formLogin">
-                <input type="text" id="loginUser" placeholder="Login" required>
-                <input type="password" id="loginSenha" placeholder="Senha" required>
-                <button type="submit">Entrar</button>
-            </form>
-            <p id="erroLogin" class="erro"></p>
-        </section>
 
-        <section class="card">
-            <h2>Criar Conta</h2>
-            <form id="formCadastro">
-                <input type="text" id="cadLogin" placeholder="Escolha um login" required>
-                <input type="text" id="cadNome" placeholder="Seu nome" required>
-                <input type="password" id="cadSenha" placeholder="Crie uma senha" required>
-                <input type="url" id="cadImg" placeholder="URL da foto de perfil (opcional)">
-                <button type="submit">Cadastrar</button>
-            </form>
-            <p id="erroCadastro" class="erro"></p>
-        </section>
+    <header class="topo">
+        <h1 class="logo">Ponto de Vista</h1>
+    </header>
 
+    <main class="pagina">
+        <section id="area-autenticacao">
+
+            <div id="formulario-login">
+                <h2>Entre na sua conta</h2>
+
+                <form id="form-login">
+                    <input
+                        type="text"
+                        id="login"
+                        placeholder="Seu login"
+                        required
+                    >
+
+                    <input
+                        type="password"
+                        id="senha"
+                        placeholder="Sua senha"
+                        required
+                    >
+
+                    <button type="submit">Entrar</button>
+                </form>
+
+                <p>Não tem uma conta?</p>
+                <button type="button" id="ir-cadastro">
+                    Criar conta
+                </button>
+            </div>
+
+            <div id="formulario-cadastro" hidden>
+                <h2>Crie sua conta</h2>
+
+                <form id="form-cadastro">
+                    <input
+                        type="text"
+                        id="nome-cadastro"
+                        placeholder="Seu nome"
+                        required
+                    >
+
+                    <input
+                        type="text"
+                        id="login-cadastro"
+                        placeholder="Escolha um login"
+                        required
+                    >
+
+                    <input
+                        type="password"
+                        id="senha-cadastro"
+                        placeholder="Escolha uma senha"
+                        required
+                    >
+
+                    <input
+                        type="url"
+                        id="foto-cadastro"
+                        placeholder="URL da foto de perfil (opcional)"
+                    >
+
+                    <button type="submit">Cadastrar</button>
+                </form>
+
+                <p>Já tem uma conta?</p>
+                <button type="button" id="ir-login">
+                    Fazer login
+                </button>
+            </div>
+
+            <p id="mensagem" role="alert"></p>
+
+        </section>
     </main>
 
     <script type="module" src="./JavaScript/login.js"></script>
 </body>
+</html>
+
 </html>

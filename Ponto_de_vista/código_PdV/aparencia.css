@@ -1,0 +1,300 @@
+
+/* ==============================
+   CONFIGURAÇÕES GERAIS
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f1f4f8;
+    color: #252d3a;
+    line-height: 1.5;
+}
+
+/* ==============================
+   CABEÇALHO
+============================== */
+
+.topo {
+    background-color: #172d50;
+    color: white;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+#area-usuario {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+}
+
+/* ==============================
+   ÁREA PRINCIPAL
+============================== */
+
+.pagina {
+    width: 90%;
+    max-width: 720px;
+    margin: 35px auto;
+}
+
+#mensagem {
+    margin-bottom: 15px;
+    color: #c0392b;
+}
+
+/* ==============================
+   FORMULÁRIO DE PUBLICAÇÃO
+============================== */
+
+#area-novo-post {
+    background-color: white;
+    padding: 22px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+#form-novo-post {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* ==============================
+   CAMPOS DE TEXTO
+============================== */
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dce2eb;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+    background-color: #fafbfd;
+    transition: border 0.2s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #3867a8;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+/* ==============================
+   BOTÕES
+============================== */
+
+button {
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    background-color: #28558f;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #1b3e6c;
+    transform: translateY(-1px);
+}
+
+button:disabled {
+    background-color: #7894b6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ==============================
+   PUBLICAÇÕES
+============================== */
+
+.post {
+    background-color: white;
+    padding: 22px;
+    border-radius: 12px;
+    margin-bottom: 22px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.post p {
+    overflow-wrap: anywhere;
+}
+
+.post img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 12px;
+}
+
+/* ==============================
+   AÇÕES DA PUBLICAÇÃO
+============================== */
+
+.botao-curtir {
+    background-color: #28558f;
+}
+
+.botao-editar-post {
+    background-color: #d18b27;
+}
+
+.botao-editar-post:hover {
+    background-color: #a96d18;
+}
+
+.botao-excluir-post,
+.botao-excluir-comentario {
+    background-color: #c44747;
+}
+
+.botao-excluir-post:hover,
+.botao-excluir-comentario:hover {
+    background-color: #a52e2e;
+}
+
+.botao-editar-comentario {
+    background-color: #d18b27;
+}
+
+/* ==============================
+   COMENTÁRIOS
+============================== */
+
+.form-comentario {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.texto-comentario {
+    flex: 1;
+    min-width: 0;
+}
+
+.post a {
+    color: #28558f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.post a:hover {
+    text-decoration: underline;
+}
+
+/* ==============================
+   LINKS
+============================== */
+
+a {
+    color: #28558f;
+}
+
+/* ==============================
+   LOGIN E CADASTRO
+============================== */
+
+#area-autenticacao {
+    width: 90%;
+    max-width: 420px;
+    margin: 70px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 14px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+#area-autenticacao h2 {
+    color: #172d50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#area-autenticacao form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+#area-autenticacao p {
+    margin-top: 18px;
+    text-align: center;
+    color: #687386;
+}
+
+#area-autenticacao button {
+    width: 100%;
+}
+
+/* ==============================
+   RESPONSIVIDADE
+============================== */
+
+@media (max-width: 600px) {
+
+    .topo {
+        padding: 15px 5%;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .pagina {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .post {
+        padding: 16px;
+    }
+
+    #area-novo-post {
+        padding: 16px;
+    }
+
+    .form-comentario {
+        flex-direction: column;
+    }
+
+    #area-autenticacao {
+        margin: 35px auto;
+        padding: 22px;
+    }
+}
+
+/* Fotos de perfil */
+.foto-perfil {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
